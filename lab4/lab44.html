@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var wd;
+
+        function mo() {
+            wd = window.open("https://www.facebook.com/");
+        }
+
+        function dong() {
+            if (wd.closed == false) {
+                wd.close();
+
+            }
+        }
+
+        function kiemtra() {
+            if (wd.closed == false) {
+                alert("Đang mở");
+
+            } else alert("Đã đóng");
+        }
+    </script>
+</head>
+
+<body>
+    <button id="btn1" value="open" onclick="mo()">Open</button>
+    <button id="btn2" value="close" onclick="dong()">Close</button>
+    <button id="btn3" value="check" onclick="kiemtra()">Check</button>
+
+
+</body>
+
+</html>

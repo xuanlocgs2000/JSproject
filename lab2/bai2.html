@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function hamToanHoc(){
+            var x = prompt('nhap vao mot so');
+            if(isNaN(x)){
+                alert(x +': khong phai so,nhap so khac');
+                hamToanHoc();
+
+            }
+            document.write('Tinh can bac hai:<br>');
+            var cbh=Math.sqrt(x);
+            document.write('CBH cua ' +x+ ' la ' +cbh);
+            
+            document.write('<br>Binh phuong cua '+x+'la '+Math.pow(x,2));
+            document.write("<br>Lam tron so :"+Math.round(x));
+        }
+    </script>
+</head>
+<body>
+    <script>
+        hamToanHoc();
+    </script>
+</body>
+</html>

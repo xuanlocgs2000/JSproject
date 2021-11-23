@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gio hang</title>
+    <script>
+        function them(btn) {
+            //copy dong
+            var row = btn.parentElement.parentElement.cloneNode(true);
+            var btnXoa = row.getElementsByTagName("button")[0];
+            btnXoa.innerText = "Xoa";
+            btnXoa.setAttribute('onclick', 'xoa(this)');
+            //paste dong
+            document.getElementById("giohang").appendChild(row);
+
+        }
+
+        function xoa(btn1) {
+            var row = btn1.parentElement.parentElement; //xac dinh dong can xoa
+            document.getElementById("giohang").removeChild(row);
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Danh sách mặt hàng</h1>
+    <table border="1" id="list">
+        <tr>
+            <td>iphone 13</td>
+            <td>15000</td>
+            <td><button onclick="them(this)">Thêm</button></td>
+        </tr>
+    </table>
+    <h1>giỏ hàng của bạn</h1>
+    <table border="1" id="giohang"></table>
+    <h2>Tổng tiền là:
+        <label id="tong"></label>
+    </h2>
+</body>
+
+</html>

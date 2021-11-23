@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fibo(){
+
+            var f0 = prompt("Nhap f0 =");
+            var f1 = prompt("Nhap f1 =");
+            var fibonaci ="";
+
+            var mangSo = new Array();
+            for(var i =2;i<10; i++){
+
+                mangSo[0] = f0;
+                mangSo[1] = f1;
+                mangSo[i] = Number(mangSo[i-1])+Number(mangSo[i-2]);
+                fibonaci  = fibonaci.concat(mangSo[i]+", ");//noi vao chuoi
+                
+
+            }
+            alert("Day so fibonaci :"+String(f0)+", "+String(f1)+", "+fibonaci);
+
+        }
+    </script>
+</head>
+<body>
+    <script> 
+        fibo();
+    </script>
+
+    
+</body>
+</html>

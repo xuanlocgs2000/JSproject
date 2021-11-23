@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function doanSo()     
+        {
+
+            var soNgauNhien = 10 +Math.round(Math.random()*5);
+            var doan= prompt('Doan so bao nhieu:');
+            if(Number(doan)== Number(soNgauNhien)){
+                document.writeln('Doan dung');
+            }
+            else if(Number(doan)<Number(soNgauNhien)){
+                document.writeln('so ban doan nho hon so ngau nhien');
+                document.writeln('<br>So ngau nhien la:'+soNgauNhien);
+            }else  if(Number(doan)>Number(soNgauNhien)){
+                document.writeln('so ban doan lon hon so ngau nhien');
+                document.writeln('<br>So ngau nhien la:'+soNgauNhien);
+            }
+        }
+    </script>
+</head>
+<body>
+    <script>
+        doanSo()
+    </script>
+    
+</body>
+</html>

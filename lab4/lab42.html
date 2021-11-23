@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<script>
+    function sinhVien() {
+        window.alert("Nhap ho ten sv:");
+        this.hoTen = prompt("Ho ten:");
+        this.diem = prompt("diem:");
+        this.hienThi = function() {
+            if (this.diem < 5) {
+                window.alert("Hoc luc yeu");
+            }
+            if (this.diem < 6.5) {
+                window.alert("Hoc luc TB");
+            }
+            if (this.diem < 8) {
+                window.alert("Hoc luc kha");
+            } else {
+                window.alert("Hoc luc gioi");
+            }
+        }
+
+    }
+</script>
+
+<body>
+    <script>
+        var a = new sinhVien();
+        a.hienThi();
+    </script>
+
+</body>
+
+</html>

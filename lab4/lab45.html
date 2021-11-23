@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <img id='anh' src="images/h2.jpg" width="800px" height="400px">
+    <script>
+        var mang = [
+            'images/h1.jpg',
+            'images/h2.jpg',
+            'images/h3.jpg',
+            'images/h4.jpg'
+        ];
+        var i = 0;
+
+        function loadImage() {
+            document.getElementById('anh').src = mang[i];
+            i++;
+            if (i == mang.length) {
+                i = 0;
+            }
+
+            setTimeout('loadImage()', 3000);
+
+
+        }
+        loadImage();
+    </script>
+
+</body>
+
+</html>
